@@ -1,0 +1,10 @@
+class Solution:
+    def isDeficient (self, x):
+        ans=0
+        for i in range(1,int(x**(0.5))+1):
+            if x%i==0:
+                ans+=i
+                ans+=(x//i)
+        if ans<2*x:
+            return 'YES'
+        return 'NO'
